@@ -37,6 +37,8 @@
             padding: 2rem;
             z-index: 1;
             position: relative;
+            height: 100vh;
+            overflow-y: auto;
         }
 
         header {
@@ -120,6 +122,109 @@
             display: block;
         }
 
+        /* Projects section */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin: 3rem 0 2rem;
+            text-shadow: 0 0 8px var(--matrix-green);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .project-card {
+            background-color: rgba(0, 20, 0, 0.7);
+            border: 1px solid var(--matrix-green);
+            border-radius: 5px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(0, 255, 65, 0.5);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            border-bottom: 1px solid var(--matrix-green);
+            padding-bottom: 0.5rem;
+        }
+
+        .project-card p {
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Apps Hub Styling */
+        .apps-hub {
+            margin: 3rem 0;
+            padding: 1.5rem;
+            background-color: rgba(0, 20, 0, 0.7);
+            border: 1px solid var(--matrix-green);
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+        }
+
+        .apps-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .app-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 150px;
+            text-decoration: none;
+            color: var(--matrix-green);
+            padding: 1rem;
+            border: 1px solid var(--matrix-green);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .app-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+            background-color: var(--matrix-light);
+        }
+
+        .app-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 8px var(--matrix-green);
+        }
+
+        .app-title {
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .coming-soon {
+            opacity: 0.7;
+            position: relative;
+        }
+
+        .coming-soon::after {
+            content: "Demnächst";
+            position: absolute;
+            bottom: -10px;
+            font-size: 0.8rem;
+            color: var(--matrix-green);
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
@@ -127,6 +232,22 @@
 
             .card {
                 flex: 1 1 100%;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .apps-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .app-link {
+                width: 80%;
+                max-width: 200px;
             }
         }
     </style>
@@ -140,17 +261,63 @@
         <div class="subtitle">[ ADVANCED SYSTEMS PROJECT ]</div>
     </header>
 
+    <!-- Neuer Apps-Hub Bereich -->
+    <div class="apps-hub">
+        <h2 class="section-title">APPS-HUB</h2>
+        <div class="apps-container">
+            <a href="apps/BsiQuiz/index.html" class="app-link">
+                <div class="app-icon">🔒</div>
+                <div class="app-title">BSI-Grundschutz Quiz</div>
+            </a>
+            <a href="#" class="app-link coming-soon">
+                <div class="app-icon">⚙️</div>
+                <div class="app-title">Weitere Apps</div>
+            </a>
+            <a href="#" class="app-link coming-soon">
+                <div class="app-icon">🛠️</div>
+                <div class="app-title">Tools</div>
+            </a>
+        </div>
+    </div>
+
     <div class="content">
         <div class="card">
             <h2>Über das Projekt</h2>
-            <p>Das TALA-SEA Projekt ist eine innovative Plattform auf der ich meine Projekte vorstelle und zur Verfügung stelle. Unser Ziel ist es, die Grenzen des Möglichen zu erweitern.</p>
+            <p>Das TALA-SEA Projekt ist eine innovative Plattform zur Entwicklung fortschrittlicher Systeme und Technologien. Unser Ziel ist es, die Grenzen des Möglichen zu erweitern.</p>
             <a href="#about" class="button">Mehr erfahren</a>
+        </div>
+
+        <div class="card">
+            <h2>Funktionen</h2>
+            <p>Unsere Kernfunktionen umfassen hochmoderne Sicherheit, skalierbare Infrastruktur und eine intuitive Benutzeroberfläche für maximale Effizienz und Leistung.</p>
+            <a href="#features" class="button">Entdecken</a>
         </div>
 
         <div class="card">
             <h2>Kontakt</h2>
             <p>Haben Sie Fragen oder möchten Sie mit uns zusammenarbeiten? Unser Team steht Ihnen jederzeit für weitere Informationen zur Verfügung.</p>
             <a href="#contact" class="button">Kontaktieren</a>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <h2 class="section-title">UNSERE ANWENDUNGEN</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>BSI-Grundschutz Quiz</h3>
+            <p>Teste dein Wissen zum BSI-Grundschutz mit diesem interaktiven Quiz. Lerne die wichtigsten Konzepte und bereite dich auf Zertifizierungen vor.</p>
+            <a href="apps/BsiQuiz/index.html" class="button">Quiz starten</a>
+        </div>
+        <!-- Platzhalter für zukünftige Projekte -->
+        <div class="project-card">
+            <h3>Projekt 2</h3>
+            <p>Weitere Tools und Anwendungen werden bald verfügbar sein. Schauen Sie regelmäßig vorbei, um neue Funktionen zu entdecken.</p>
+            <a href="#" class="button">Demnächst verfügbar</a>
+        </div>
+        <div class="project-card">
+            <h3>Projekt 3</h3>
+            <p>Unsere Entwicklerteams arbeiten an fortschrittlichen Sicherheitsanwendungen, die in Kürze hier erscheinen werden.</p>
+            <a href="#" class="button">Demnächst verfügbar</a>
         </div>
     </div>
 
