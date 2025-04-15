@@ -1,12 +1,9 @@
-ddocument.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
   // Quiz-Daten
   const quizData = {
     "meta": {
       "title": "Übungsfragen für den BSI-Grundschutz Praktiker",
-      "author": "Jean-Christoph von Oertzen",
-      "licence": "CC BY 3.0 DE <https://creativecommons.org/licenses/by/3.0/de/>",
-      "homepage": "https://jeanchristophvonoertzen.com",
-      "contributors": []
+           "contributors": []
     },
     "quiz": {
       "Einstieg": {
@@ -143,48 +140,7 @@ ddocument.addEventListener('DOMContentLoaded', function() {
           "right": ["B", "C", "D"]
         }
       },
-      "Strukturanalyse": {
-        "7": {
-          "question": "Welche Phasen sind in der Strukturanalyse gemäß IT-Grundschutz vorgesehen?",
-          "answers": {
-            "A": "Erhebung der vorhandenen Informationen",
-            "B": "Erstellung eines Netzplans mit allen Zielkomponenten",
-            "C": "Erfassung der verarbeiteten Anwendungen und ihrer Daten",
-            "D": "Dokumentation der zugrundeliegenden IT-Systeme"
-          },
-          "right": ["A", "C", "D"]
-        },
-        "8": {
-          "question": "Welche Informationen werden in der Strukturanalyse typischerweise erfasst?",
-          "answers": {
-            "A": "Anzahl der Mitarbeiter pro Abteilung",
-            "B": "Geschäftsprozesse und Fachaufgaben",
-            "C": "IT-Systeme, die für die Geschäftsprozesse relevant sind",
-            "D": "Kommunikationsverbindungen zwischen IT-Systemen"
-          },
-          "right": ["B", "C", "D"]
-        },
-        "9": {
-          "question": "Welche Aussagen treffen auf den Informationsverbund als Gegenstand der Strukturanalyse zu?",
-          "answers": {
-            "A": "Ein Informationsverbund besteht aus Technik, Anwendungen, Räumlichkeiten und Personen",
-            "B": "Ein Informationsverbund muss mindestens 50 IT-Systeme umfassen",
-            "C": "Die Größe des Informationsverbunds sollte sinnvoll gewählt werden",
-            "D": "Ein Informationsverbund kann mehrere Standorte umfassen"
-          },
-          "right": ["A", "C", "D"]
-        },
-        "10": {
-          "question": "Welche Elemente sollten in einem Netzplan dokumentiert werden?",
-          "answers": {
-            "A": "Physische Verbindungen zwischen IT-Systemen",
-            "B": "Logische Netzsegmente und deren Grenzen",
-            "C": "Alle eingesetzten Sicherheitskomponenten",
-            "D": "Die vollständigen Lebensläufe aller Administratoren"
-          },
-          "right": ["A", "B", "C"]
-        }
-      },
+      "Strukturanalyse": {},
       "Schutzbedarfsfeststellung": {
         "7": {
           "question": "Wovon hängt der Schutzbedarf eines Objekts besonders ab?",
@@ -209,7 +165,7 @@ ddocument.addEventListener('DOMContentLoaded', function() {
         "9": {
           "question": "Wenn bei der Schutzbedarfsfeststellung für ein IT-System Verteilungseffekte berücksichtigt werden, bedeutet dies, dass …",
           "answers": {
-            "A": "… sich der Schutzbedarf des IT-Systems erhöht, weil sich Einzelschäden zu einem höheren Gesamt­schaden verteilen.",
+            "A": "… sich der Schutzbedarf des IT-Systems erhöht, weil sich Einzelschäden zu einem höheren Gesamtschaden verteilen.",
             "B": "… sich der Schutzbedarf des IT-Systems verringert, weil geeignete, sich gegenseitig verstärkende Sicherheitsmaßnahmen im Einsatz sind.",
             "C": "… sich der Schutzbedarf des IT-Systems verringert, wenn eine Anwendung mit hohem Schutzbedarf auf mehrere Systeme verteilt ist.",
             "D": "… der Schutzbedarf geringer ist, wenn auf dem betreffenden IT-System nur weniger wichtige Teile dieser Anwendung ausgeführt werden."
@@ -235,138 +191,6 @@ ddocument.addEventListener('DOMContentLoaded', function() {
             "D": "das Schutzbedarfsfeststellungen dem Standard gemäß ISO 27003 entsprechend dokumentiert werden"
           },
           "right": ["A"]
-        },
-        "12": {
-          "question": "Welche Schutzbedarfskategorien werden beim BSI-Grundschutz unterschieden?",
-          "answers": {
-            "A": "niedrig",
-            "B": "normal",
-            "C": "hoch",
-            "D": "sehr hoch"
-          },
-          "right": ["A", "B", "C", "D"]
-        },
-        "13": {
-          "question": "Welche Aspekte werden bei der Schutzbedarfsfeststellung typischerweise betrachtet?",
-          "answers": {
-            "A": "Vertraulichkeit",
-            "B": "Integrität",
-            "C": "Verfügbarkeit",
-            "D": "Kosteneffizienz"
-          },
-          "right": ["A", "B", "C"]
-        },
-        "14": {
-          "question": "Was bedeutet 'normaler Schutzbedarf' bei der Vertraulichkeit?",
-          "answers": {
-            "A": "Die Informationen sind für einen begrenzten Personenkreis bestimmt",
-            "B": "Eine Verletzung hätte beträchtliche Beeinträchtigungen zur Folge",
-            "C": "Die Informationen sind öffentlich zugänglich",
-            "D": "Die Informationen benötigen militärische Geheimhaltung"
-          },
-          "right": ["A", "B"]
-        },
-        "15": {
-          "question": "Wie bestimmt man den Schutzbedarf von IT-Systemen?",
-          "answers": {
-            "A": "Durch Übernahme des Schutzbedarfs der darauf betriebenen Anwendungen",
-            "B": "Durch Analyse der Schadensauswirkungen bei Verlust von Vertraulichkeit, Integrität oder Verfügbarkeit",
-            "C": "Anhand des höchsten Anschaffungspreises der Komponenten",
-            "D": "Durch Bewertung von Kumulationseffekten, falls mehrere Anwendungen auf dem System laufen"
-          },
-          "right": ["A", "B", "D"]
-        },
-        "16": {
-          "question": "Welche Hilfsmittel verwendet man typischerweise bei der Schutzbedarfsfeststellung?",
-          "answers": {
-            "A": "Schutzbedarfskategorien",
-            "B": "Auswahlkriterien für Sicherheitsmaßnahmen",
-            "C": "Schadensszenarien",
-            "D": "Vererbungsprinzip (Maximum- und Kumulationsprinzip)"
-          },
-          "right": ["A", "C", "D"]
-        }
-      },
-      "Modellierung": {
-        "7": {
-          "question": "Was ist das Ziel der Modellierung im IT-Grundschutz?",
-          "answers": {
-            "A": "Die Abbildung komplexer IT-Landschaften durch einfachere Modelle",
-            "B": "Den Schutzbedarf der IT-Systeme zu bestimmen",
-            "C": "Passende IT-Grundschutz-Bausteine für die vorhandenen Komponenten zu identifizieren",
-            "D": "Die Erstellung von Netzplänen für das gesamte Unternehmen"
-          },
-          "right": ["A", "C"]
-        },
-        "8": {
-          "question": "Welche Grundlage wird für die Modellierung laut IT-Grundschutz benötigt?",
-          "answers": {
-            "A": "Eine vollständige Strukturanalyse des zu modellierenden Informationsverbunds",
-            "B": "Ein Netzplan mit der definierten Firewall-Konfiguration",
-            "C": "Eine vollständige Schutzbedarfsfeststellung für alle Komponenten",
-            "D": "Ein definierter und klar abgegrenzter Informationsverbund"
-          },
-          "right": ["A", "C", "D"]
-        },
-        "9": {
-          "question": "Wie werden IT-Systeme im IT-Grundschutz modelliert?",
-          "answers": {
-            "A": "Durch Anwendung genau eines Bausteins pro IT-System",
-            "B": "Durch Vergleich mit Referenzarchitekturen im IT-Grundschutz-Kompendium",
-            "C": "Durch Zuordnung aller zutreffenden Bausteine für jeden Aspekt des Systems",
-            "D": "Durch Analyse der eingesetzten Anwendungen und Dienste"
-          },
-          "right": ["C", "D"]
-        },
-        "10": {
-          "question": "Was muss bei der Modellierung von Netzverbindungen berücksichtigt werden?",
-          "answers": {
-            "A": "Nur die physischen Verbindungen zwischen Systemen",
-            "B": "Die logischen Verbindungen und Kommunikationsbeziehungen",
-            "C": "Die Vertrauenswürdigkeit der übertragenen Informationen",
-            "D": "Nur die öffentlich zugänglichen Verbindungen"
-          },
-          "right": ["B", "C"]
-        },
-        "11": {
-          "question": "Wann sollten bei der Modellierung nach IT-Grundschutz Gruppen gebildet werden?",
-          "answers": {
-            "A": "Immer wenn mehr als 10 ähnliche IT-Systeme vorhanden sind",
-            "B": "Wenn gleichartige Komponenten ähnlich konfiguriert sind und gleichen Schutzbedarf haben",
-            "C": "Wenn alle Systeme im gleichen Raum stehen",
-            "D": "Wenn dadurch der Aufwand für die Modellierung und Umsetzung verringert werden kann"
-          },
-          "right": ["B", "D"]
-        },
-        "12": {
-          "question": "Welche Vorteile bietet die Gruppenbildung bei der Modellierung?",
-          "answers": {
-            "A": "Reduzierung des Dokumentationsaufwands",
-            "B": "Vereinfachung des BSI-Grundschutz-Checks",
-            "C": "Erleichterung der einheitlichen Absicherung",
-            "D": "Automatische Erhöhung des Sicherheitsniveaus"
-          },
-          "right": ["A", "B", "C"]
-        },
-        "13": {
-          "question": "Welche Bedingungen müssen Komponenten erfüllen, um zu einer Gruppe zusammengefasst zu werden?",
-          "answers": {
-            "A": "Gleicher Schutzbedarf",
-            "B": "Gleiche Hersteller",
-            "C": "Ähnliche Konfiguration",
-            "D": "Gleiche Einsatzumgebung"
-          },
-          "right": ["A", "C", "D"]
-        },
-        "14": {
-          "question": "Was erleichtert die Zuordnung von Bausteinen bei der Modellierung?",
-          "answers": {
-            "A": "Die Schichtenaufteilung im IT-Grundschutz",
-            "B": "Der Vergleich mit Referenzarchitekturen",
-            "C": "Die Zuweisung aller Bausteine zu allen IT-Systemen",
-            "D": "Die Unterscheidung zwischen Infrastruktur-, System- und Anwendungsschicht"
-          },
-          "right": ["A", "B", "D"]
         }
       },
       "Risikoanalyse": {
@@ -476,6 +300,7 @@ ddocument.addEventListener('DOMContentLoaded', function() {
           },
           "right": ["B", "C", "D"]
         }
+
       }
     }
   };
@@ -502,7 +327,7 @@ ddocument.addEventListener('DOMContentLoaded', function() {
   const restartBtn = document.getElementById('restart-btn');
   const progressBar = document.getElementById('progress-bar');
 
-// Quiz-Zustandsvariablen
+  // Quiz-Zustandsvariablen
   let categories = Object.keys(quizData.quiz);
   let currentCategory = null;
   let currentQuestions = [];
@@ -522,7 +347,6 @@ ddocument.addEventListener('DOMContentLoaded', function() {
   answerOptions.forEach(option => {
     option.addEventListener('click', () => {
       const optionLetter = option.getAttribute('data-option');
-
       if (selectedAnswers.includes(optionLetter)) {
         // Wenn bereits ausgewählt, Auswahl aufheben
         selectedAnswers = selectedAnswers.filter(letter => letter !== optionLetter);
@@ -534,6 +358,87 @@ ddocument.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  // Füge einen "Zurück zur Startseite"-Button hinzu
+  function addHomeButton() {
+    const homeButton = document.createElement('button');
+    homeButton.id = 'home-button';
+    homeButton.textContent = 'Zurück zur Startseite';
+    homeButton.classList.add('chalk-btn');
+    homeButton.addEventListener('click', () => {
+      quizScreen.classList.add('hidden');
+      startScreen.classList.remove('hidden');
+    });
+
+    // Button zum Quiz-Screen hinzufügen
+    document.getElementById('submit-container').appendChild(homeButton);
+  }
+
+  // Neue Kategorie für sequentielles Lernen hinzufügen
+  function addSequentialLearningCategory() {
+    const sequentialCategoryBtn = document.createElement('button');
+    sequentialCategoryBtn.textContent = 'Lernmodus';
+    sequentialCategoryBtn.classList.add('category-btn');
+    sequentialCategoryBtn.addEventListener('click', () => startSequentialLearning());
+    categoriesContainer.appendChild(sequentialCategoryBtn);
+  }
+
+  // Funktion für sequentielles Lernen
+  function startSequentialLearning() {
+    categoryScreen.classList.add('hidden');
+    quizScreen.classList.remove('hidden');
+
+    // Quiz mit allen Fragen in Reihenfolge initialisieren
+    currentCategory = 'sequential';
+    currentQuestions = [];
+    currentQuestionIndex = 0;
+    score = 0;
+
+    // Alle Fragen aus allen Kategorien sammeln
+    categories.forEach(cat => {
+      const categoryQuestions = Object.keys(quizData.quiz[cat]);
+      categoryQuestions.forEach(questionId => {
+        currentQuestions.push({
+          category: cat,
+          id: questionId,
+          ...quizData.quiz[cat][questionId]
+        });
+      });
+    });
+
+    // Fragen nicht mischen im Lernmodus
+    totalQuestions = currentQuestions.length;
+
+    // Erste Frage anzeigen
+    showQuestion();
+
+    // Zurück-Button und Home-Button hinzufügen
+    addBackButton();
+    addHomeButton();
+  }
+
+  // Zurück-Button für Navigation zur vorherigen Frage
+  function addBackButton() {
+    // Prüfen ob bereits ein Zurück-Button existiert und entfernen
+    const existingBackButton = document.getElementById('back-button');
+    if (existingBackButton) {
+      existingBackButton.remove();
+    }
+
+    const backButton = document.createElement('button');
+    backButton.id = 'back-button';
+    backButton.textContent = 'Zurück';
+    backButton.classList.add('chalk-btn');
+    backButton.addEventListener('click', () => {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        showQuestion();
+      }
+    });
+
+    // Button zum Quiz-Screen hinzufügen
+    document.getElementById('submit-container').appendChild(backButton);
+  }
 
   // Funktionen
   function showCategoryScreen() {
@@ -551,6 +456,9 @@ ddocument.addEventListener('DOMContentLoaded', function() {
         categoriesContainer.appendChild(categoryBtn);
       }
     });
+
+    // Lernmodus-Kategorie hinzufügen
+    addSequentialLearningCategory();
   }
 
   function startQuiz(category) {
@@ -576,7 +484,6 @@ ddocument.addEventListener('DOMContentLoaded', function() {
           });
         });
       });
-
       // Mischen und auf 5 Fragen begrenzen
       shuffleArray(currentQuestions);
       currentQuestions = currentQuestions.slice(0, 5);
@@ -590,13 +497,15 @@ ddocument.addEventListener('DOMContentLoaded', function() {
           ...quizData.quiz[category][questionId]
         });
       });
-
       // Mischen
       shuffleArray(currentQuestions);
     }
 
     totalQuestions = currentQuestions.length;
     showQuestion();
+
+    // Home-Button hinzufügen
+    addHomeButton();
   }
 
   function showQuestion() {
@@ -611,6 +520,8 @@ ddocument.addEventListener('DOMContentLoaded', function() {
 
     // Feedback ausblenden
     feedbackContainer.classList.add('hidden');
+    nextBtn.classList.add('hidden');
+    submitBtn.classList.remove('hidden');
 
     const currentQuestion = currentQuestions[currentQuestionIndex];
 
@@ -631,41 +542,42 @@ ddocument.addEventListener('DOMContentLoaded', function() {
   function checkAnswer() {
     const currentQuestion = currentQuestions[currentQuestionIndex];
     const correctAnswerLetters = currentQuestion.right;
-    
+
     // Antworten markieren
     answerOptions.forEach(option => {
       const optionLetter = option.getAttribute('data-option');
-      
       if (correctAnswerLetters.includes(optionLetter)) {
         option.classList.add('correct');
       } else if (selectedAnswers.includes(optionLetter)) {
         option.classList.add('incorrect');
       }
     });
-    
+
     // Prüfen, ob alle richtigen Antworten ausgewählt wurden und keine falschen
     const allCorrectSelected = correctAnswerLetters.every(letter => selectedAnswers.includes(letter));
     const noIncorrectSelected = selectedAnswers.every(letter => correctAnswerLetters.includes(letter));
     const isCorrect = allCorrectSelected && noIncorrectSelected;
-    
+
     // Feedback anzeigen
     feedbackContainer.classList.remove('hidden');
-    
     if (isCorrect) {
       feedbackMessage.textContent = "Richtig! Alle korrekten Antworten wurden ausgewählt.";
+      correctAnswers.textContent = "";
       score++;
     } else {
       feedbackMessage.textContent = "Falsch!";
-      
       // Richtige Antworten anzeigen
-      correctAnswers.textContent = `Die richtigen Antworten sind: ${correctAnswerLetters.map(letter => 
-        `${letter}: ${currentQuestion.answers[letter]}`).join(', ')}`;
+      correctAnswers.textContent = `Die richtigen Antworten sind: ${correctAnswerLetters.map(letter =>
+          `${letter}: ${currentQuestion.answers[letter]}`).join(', ')}`;
     }
+
+    // Submit-Button ausblenden und Next-Button einblenden
+    submitBtn.classList.add('hidden');
+    nextBtn.classList.remove('hidden');
   }
 
   function showNextQuestion() {
     currentQuestionIndex++;
-    
     if (currentQuestionIndex < currentQuestions.length) {
       showQuestion();
     } else {
@@ -676,7 +588,6 @@ ddocument.addEventListener('DOMContentLoaded', function() {
   function showResults() {
     quizScreen.classList.add('hidden');
     resultsScreen.classList.remove('hidden');
-    
     scoreDisplay.textContent = `Du hast ${score} von ${totalQuestions} Fragen richtig beantwortet.`;
     const percentage = (score / totalQuestions) * 100;
     percentageDisplay.textContent = `Erfolgsquote: ${percentage.toFixed(1)}%`;
