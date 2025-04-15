@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+ddocument.addEventListener('DOMContentLoaded', function() {
   // Quiz-Daten
   const quizData = {
     "meta": {
@@ -143,7 +143,48 @@ document.addEventListener('DOMContentLoaded', function() {
           "right": ["B", "C", "D"]
         }
       },
-      "Strukturanalyse": {},
+      "Strukturanalyse": {
+        "7": {
+          "question": "Welche Phasen sind in der Strukturanalyse gemäß IT-Grundschutz vorgesehen?",
+          "answers": {
+            "A": "Erhebung der vorhandenen Informationen",
+            "B": "Erstellung eines Netzplans mit allen Zielkomponenten",
+            "C": "Erfassung der verarbeiteten Anwendungen und ihrer Daten",
+            "D": "Dokumentation der zugrundeliegenden IT-Systeme"
+          },
+          "right": ["A", "C", "D"]
+        },
+        "8": {
+          "question": "Welche Informationen werden in der Strukturanalyse typischerweise erfasst?",
+          "answers": {
+            "A": "Anzahl der Mitarbeiter pro Abteilung",
+            "B": "Geschäftsprozesse und Fachaufgaben",
+            "C": "IT-Systeme, die für die Geschäftsprozesse relevant sind",
+            "D": "Kommunikationsverbindungen zwischen IT-Systemen"
+          },
+          "right": ["B", "C", "D"]
+        },
+        "9": {
+          "question": "Welche Aussagen treffen auf den Informationsverbund als Gegenstand der Strukturanalyse zu?",
+          "answers": {
+            "A": "Ein Informationsverbund besteht aus Technik, Anwendungen, Räumlichkeiten und Personen",
+            "B": "Ein Informationsverbund muss mindestens 50 IT-Systeme umfassen",
+            "C": "Die Größe des Informationsverbunds sollte sinnvoll gewählt werden",
+            "D": "Ein Informationsverbund kann mehrere Standorte umfassen"
+          },
+          "right": ["A", "C", "D"]
+        },
+        "10": {
+          "question": "Welche Elemente sollten in einem Netzplan dokumentiert werden?",
+          "answers": {
+            "A": "Physische Verbindungen zwischen IT-Systemen",
+            "B": "Logische Netzsegmente und deren Grenzen",
+            "C": "Alle eingesetzten Sicherheitskomponenten",
+            "D": "Die vollständigen Lebensläufe aller Administratoren"
+          },
+          "right": ["A", "B", "C"]
+        }
+      },
       "Schutzbedarfsfeststellung": {
         "7": {
           "question": "Wovon hängt der Schutzbedarf eines Objekts besonders ab?",
@@ -194,6 +235,138 @@ document.addEventListener('DOMContentLoaded', function() {
             "D": "das Schutzbedarfsfeststellungen dem Standard gemäß ISO 27003 entsprechend dokumentiert werden"
           },
           "right": ["A"]
+        },
+        "12": {
+          "question": "Welche Schutzbedarfskategorien werden beim BSI-Grundschutz unterschieden?",
+          "answers": {
+            "A": "niedrig",
+            "B": "normal",
+            "C": "hoch",
+            "D": "sehr hoch"
+          },
+          "right": ["A", "B", "C", "D"]
+        },
+        "13": {
+          "question": "Welche Aspekte werden bei der Schutzbedarfsfeststellung typischerweise betrachtet?",
+          "answers": {
+            "A": "Vertraulichkeit",
+            "B": "Integrität",
+            "C": "Verfügbarkeit",
+            "D": "Kosteneffizienz"
+          },
+          "right": ["A", "B", "C"]
+        },
+        "14": {
+          "question": "Was bedeutet 'normaler Schutzbedarf' bei der Vertraulichkeit?",
+          "answers": {
+            "A": "Die Informationen sind für einen begrenzten Personenkreis bestimmt",
+            "B": "Eine Verletzung hätte beträchtliche Beeinträchtigungen zur Folge",
+            "C": "Die Informationen sind öffentlich zugänglich",
+            "D": "Die Informationen benötigen militärische Geheimhaltung"
+          },
+          "right": ["A", "B"]
+        },
+        "15": {
+          "question": "Wie bestimmt man den Schutzbedarf von IT-Systemen?",
+          "answers": {
+            "A": "Durch Übernahme des Schutzbedarfs der darauf betriebenen Anwendungen",
+            "B": "Durch Analyse der Schadensauswirkungen bei Verlust von Vertraulichkeit, Integrität oder Verfügbarkeit",
+            "C": "Anhand des höchsten Anschaffungspreises der Komponenten",
+            "D": "Durch Bewertung von Kumulationseffekten, falls mehrere Anwendungen auf dem System laufen"
+          },
+          "right": ["A", "B", "D"]
+        },
+        "16": {
+          "question": "Welche Hilfsmittel verwendet man typischerweise bei der Schutzbedarfsfeststellung?",
+          "answers": {
+            "A": "Schutzbedarfskategorien",
+            "B": "Auswahlkriterien für Sicherheitsmaßnahmen",
+            "C": "Schadensszenarien",
+            "D": "Vererbungsprinzip (Maximum- und Kumulationsprinzip)"
+          },
+          "right": ["A", "C", "D"]
+        }
+      },
+      "Modellierung": {
+        "7": {
+          "question": "Was ist das Ziel der Modellierung im IT-Grundschutz?",
+          "answers": {
+            "A": "Die Abbildung komplexer IT-Landschaften durch einfachere Modelle",
+            "B": "Den Schutzbedarf der IT-Systeme zu bestimmen",
+            "C": "Passende IT-Grundschutz-Bausteine für die vorhandenen Komponenten zu identifizieren",
+            "D": "Die Erstellung von Netzplänen für das gesamte Unternehmen"
+          },
+          "right": ["A", "C"]
+        },
+        "8": {
+          "question": "Welche Grundlage wird für die Modellierung laut IT-Grundschutz benötigt?",
+          "answers": {
+            "A": "Eine vollständige Strukturanalyse des zu modellierenden Informationsverbunds",
+            "B": "Ein Netzplan mit der definierten Firewall-Konfiguration",
+            "C": "Eine vollständige Schutzbedarfsfeststellung für alle Komponenten",
+            "D": "Ein definierter und klar abgegrenzter Informationsverbund"
+          },
+          "right": ["A", "C", "D"]
+        },
+        "9": {
+          "question": "Wie werden IT-Systeme im IT-Grundschutz modelliert?",
+          "answers": {
+            "A": "Durch Anwendung genau eines Bausteins pro IT-System",
+            "B": "Durch Vergleich mit Referenzarchitekturen im IT-Grundschutz-Kompendium",
+            "C": "Durch Zuordnung aller zutreffenden Bausteine für jeden Aspekt des Systems",
+            "D": "Durch Analyse der eingesetzten Anwendungen und Dienste"
+          },
+          "right": ["C", "D"]
+        },
+        "10": {
+          "question": "Was muss bei der Modellierung von Netzverbindungen berücksichtigt werden?",
+          "answers": {
+            "A": "Nur die physischen Verbindungen zwischen Systemen",
+            "B": "Die logischen Verbindungen und Kommunikationsbeziehungen",
+            "C": "Die Vertrauenswürdigkeit der übertragenen Informationen",
+            "D": "Nur die öffentlich zugänglichen Verbindungen"
+          },
+          "right": ["B", "C"]
+        },
+        "11": {
+          "question": "Wann sollten bei der Modellierung nach IT-Grundschutz Gruppen gebildet werden?",
+          "answers": {
+            "A": "Immer wenn mehr als 10 ähnliche IT-Systeme vorhanden sind",
+            "B": "Wenn gleichartige Komponenten ähnlich konfiguriert sind und gleichen Schutzbedarf haben",
+            "C": "Wenn alle Systeme im gleichen Raum stehen",
+            "D": "Wenn dadurch der Aufwand für die Modellierung und Umsetzung verringert werden kann"
+          },
+          "right": ["B", "D"]
+        },
+        "12": {
+          "question": "Welche Vorteile bietet die Gruppenbildung bei der Modellierung?",
+          "answers": {
+            "A": "Reduzierung des Dokumentationsaufwands",
+            "B": "Vereinfachung des BSI-Grundschutz-Checks",
+            "C": "Erleichterung der einheitlichen Absicherung",
+            "D": "Automatische Erhöhung des Sicherheitsniveaus"
+          },
+          "right": ["A", "B", "C"]
+        },
+        "13": {
+          "question": "Welche Bedingungen müssen Komponenten erfüllen, um zu einer Gruppe zusammengefasst zu werden?",
+          "answers": {
+            "A": "Gleicher Schutzbedarf",
+            "B": "Gleiche Hersteller",
+            "C": "Ähnliche Konfiguration",
+            "D": "Gleiche Einsatzumgebung"
+          },
+          "right": ["A", "C", "D"]
+        },
+        "14": {
+          "question": "Was erleichtert die Zuordnung von Bausteinen bei der Modellierung?",
+          "answers": {
+            "A": "Die Schichtenaufteilung im IT-Grundschutz",
+            "B": "Der Vergleich mit Referenzarchitekturen",
+            "C": "Die Zuweisung aller Bausteine zu allen IT-Systemen",
+            "D": "Die Unterscheidung zwischen Infrastruktur-, System- und Anwendungsschicht"
+          },
+          "right": ["A", "B", "D"]
         }
       },
       "Risikoanalyse": {
@@ -329,7 +502,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const restartBtn = document.getElementById('restart-btn');
   const progressBar = document.getElementById('progress-bar');
 
-  // Quiz-Zustandsvariablen
+// Quiz-Zustandsvariablen
   let categories = Object.keys(quizData.quiz);
   let currentCategory = null;
   let currentQuestions = [];
@@ -349,7 +522,7 @@ document.addEventListener('DOMContentLoaded', function() {
   answerOptions.forEach(option => {
     option.addEventListener('click', () => {
       const optionLetter = option.getAttribute('data-option');
-      
+
       if (selectedAnswers.includes(optionLetter)) {
         // Wenn bereits ausgewählt, Auswahl aufheben
         selectedAnswers = selectedAnswers.filter(letter => letter !== optionLetter);
@@ -366,7 +539,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function showCategoryScreen() {
     startScreen.classList.add('hidden');
     categoryScreen.classList.remove('hidden');
-    
+
     // Kategorien anzeigen
     categoriesContainer.innerHTML = '';
     categories.forEach(category => {
@@ -383,13 +556,13 @@ document.addEventListener('DOMContentLoaded', function() {
   function startQuiz(category) {
     categoryScreen.classList.add('hidden');
     quizScreen.classList.remove('hidden');
-    
+
     // Quiz initialisieren
     currentCategory = category;
     currentQuestions = [];
     currentQuestionIndex = 0;
     score = 0;
-    
+
     // Fragen sammeln
     if (category === 'random') {
       // Zufällige Fragen aus allen Kategorien
@@ -403,7 +576,7 @@ document.addEventListener('DOMContentLoaded', function() {
           });
         });
       });
-      
+
       // Mischen und auf 5 Fragen begrenzen
       shuffleArray(currentQuestions);
       currentQuestions = currentQuestions.slice(0, 5);
@@ -417,11 +590,11 @@ document.addEventListener('DOMContentLoaded', function() {
           ...quizData.quiz[category][questionId]
         });
       });
-      
+
       // Mischen
       shuffleArray(currentQuestions);
     }
-    
+
     totalQuestions = currentQuestions.length;
     showQuestion();
   }
@@ -429,24 +602,24 @@ document.addEventListener('DOMContentLoaded', function() {
   function showQuestion() {
     // Fortschrittsbalken aktualisieren
     progressBar.style.width = `${(currentQuestionIndex / totalQuestions) * 100}%`;
-    
+
     // Ausgewählte Antworten zurücksetzen
     selectedAnswers = [];
     answerOptions.forEach(option => {
       option.classList.remove('selected', 'correct', 'incorrect');
     });
-    
+
     // Feedback ausblenden
     feedbackContainer.classList.add('hidden');
-    
+
     const currentQuestion = currentQuestions[currentQuestionIndex];
-    
+
     // Kategorie anzeigen
     categoryDisplay.textContent = currentQuestion.category;
-    
+
     // Frage anzeigen
     questionContainer.textContent = currentQuestion.question;
-    
+
     // Antwortoptionen anzeigen
     answerOptions.forEach(option => {
       const optionLetter = option.getAttribute('data-option');
