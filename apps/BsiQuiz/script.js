@@ -644,7 +644,6 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
 // DOM-Elemente
-
   const startScreen = document.getElementById('start-screen');
   const categoryScreen = document.getElementById('category-screen');
   const quizScreen = document.getElementById('quiz-screen');
@@ -701,19 +700,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-// Füge einen "Zurück zur Startseite"-Button hinzu
-
   function addHomeButton() {
-    const homeButton = document.createElement('button');
-    homeButton.id = 'home-button';
-    homeButton.textContent = 'Zurück zur Startseite';
-    homeButton.classList.add('chalk-btn');
-    homeButton.addEventListener('click', () => {
-      quizScreen.classList.add('hidden');
-      startScreen.classList.remove('hidden');
-    });
-    // Button zum Quiz-Screen hinzufügen
-    document.getElementById('submit-container').appendChild(homeButton);
+    // Prüfen, ob der Button bereits existiert
+    if (!document.getElementById('home-button')) {
+      const homeButton = document.createElement('button');
+      homeButton.id = 'home-button';
+      homeButton.textContent = 'Zurück zur Startseite';
+      homeButton.classList.add('chalk-btn');
+      homeButton.addEventListener('click', () => {
+        quizScreen.classList.add('hidden');
+        startScreen.classList.remove('hidden');
+      });
+      // Button zum Quiz-Screen hinzufügen
+      document.getElementById('submit-container').appendChild(homeButton);
+    }
   }
 
 // Neue Kategorie für sequentielles Lernen hinzufügen
