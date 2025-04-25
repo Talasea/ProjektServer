@@ -548,7 +548,7 @@ document.addEventListener('DOMContentLoaded', function() {
           "right": ["B", "C", "D"]
         }
       },
-      "Prüfungsvorbereitung": {
+      "Pruefungsvorbereitung": {
         "7": {
           "question": "Welche Ziele verfolgt das Risikomanagement gemäß BSI-Standard 200-3?",
           "answers": {
