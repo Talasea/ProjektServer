@@ -767,7 +767,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const backButton = document.createElement('button');
     backButton.id = 'back-button';
     backButton.textContent = 'Zurück';
-    backButton.classList.add('chalk-btn');
+    backButton.classList.add('chalk-btn'); //alex hilfe
     backButton.addEventListener('click', () => {
       if (currentQuestionIndex > 0) {
         currentQuestionIndex--;
