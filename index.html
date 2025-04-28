@@ -66,6 +66,7 @@
             flex-wrap: wrap;
             gap: 2rem;
             justify-content: center;
+            margin-bottom: 2rem; /* Add margin to separate from footer */
         }
 
         .card {
@@ -77,6 +78,8 @@
             max-width: 400px;
             box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
             transition: all 0.3s ease;
+            display: flex; /* Ensure cards align content properly */
+            flex-direction: column; /* Stack content vertically */
         }
 
         .card:hover {
@@ -90,6 +93,11 @@
             margin-top: 0;
         }
 
+        .card p {
+            flex-grow: 1; /* Allow paragraph to take available space */
+            margin-bottom: 1.5rem; /* Space before button */
+        }
+
         .button {
             display: inline-block;
             background-color: var(--matrix-light);
@@ -98,9 +106,10 @@
             border: 1px solid var(--matrix-green);
             border-radius: 3px;
             text-decoration: none;
-            margin-top: 1rem;
+            margin-top: auto; /* Push button to the bottom */
             transition: all 0.3s ease;
             cursor: pointer;
+            align-self: flex-start; /* Align button to the start */
         }
 
         .button:hover {
@@ -122,48 +131,6 @@
             display: block;
         }
 
-        /* Projects section */
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin: 3rem 0 2rem;
-            text-shadow: 0 0 8px var(--matrix-green);
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .project-card {
-            background-color: rgba(0, 20, 0, 0.7);
-            border: 1px solid var(--matrix-green);
-            border-radius: 5px;
-            padding: 1.5rem;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 25px rgba(0, 255, 65, 0.5);
-        }
-
-        .project-card h3 {
-            margin-top: 0;
-            font-size: 1.5rem;
-            border-bottom: 1px solid var(--matrix-green);
-            padding-bottom: 0.5rem;
-        }
-
-        .project-card p {
-            flex-grow: 1;
-            margin-bottom: 1.5rem;
-        }
-
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
@@ -171,10 +138,6 @@
 
             .card {
                 flex: 1 1 100%;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -202,30 +165,15 @@
         </div>
 
         <div class="card">
+            <h2>App-Hub</h2>
+            <p>Entdecken Sie unsere Sammlung von Tools und Anwendungen im zentralen App-Hub. Hier finden Sie nützliche Programme und Quizze.</p>
+            <a href="App-Hub.html" class="button">Zum App-Hub</a>
+        </div>
+
+        <div class="card">
             <h2>Kontakt</h2>
             <p>Haben Sie Fragen oder möchten Sie mit uns zusammenarbeiten? Unser Team steht Ihnen jederzeit für weitere Informationen zur Verfügung.</p>
             <a href="#contact" class="button">Kontaktieren</a>
-        </div>
-    </div>
-
-    <!-- New Projects Section -->
-    <h2 class="section-title">UNSERE ANWENDUNGEN</h2>
-    <div class="projects-grid">
-        <div class="project-card">
-            <h3>BSI-Grundschutz Quiz</h3>
-            <p>Teste dein Wissen zum BSI-Grundschutz mit diesem interaktiven Quiz. Lerne die wichtigsten Konzepte und bereite dich auf Zertifizierungen vor.</p>
-            <a href="apps/BsiQuiz/index.html" class="button">Quiz starten</a>
-        </div>
-        <!-- Platzhalter für zukünftige Projekte -->
-        <div class="project-card">
-            <h3>Projekt 2</h3>
-            <p>Weitere Tools und Anwendungen werden bald verfügbar sein. Schauen Sie regelmäßig vorbei, um neue Funktionen zu entdecken.</p>
-            <a href="#" class="button">Demnächst verfügbar</a>
-        </div>
-        <div class="project-card">
-            <h3>Projekt 3</h3>
-            <p>Unsere Entwicklerteams arbeiten an fortschrittlichen Sicherheitsanwendungen, die in Kürze hier erscheinen werden.</p>
-            <a href="#" class="button">Demnächst verfügbar</a>
         </div>
     </div>
 
@@ -285,6 +233,12 @@
     window.addEventListener('resize', () => {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
+        // Recalculate columns and reset drops on resize might be needed for better visual consistency
+        // const columns = Math.floor(canvas.width / fontSize);
+        // drops = [];
+        // for (let i = 0; i < columns; i++) {
+        //     drops[i] = Math.floor(Math.random() * canvas.height);
+        // }
     });
 
     // Run animation
